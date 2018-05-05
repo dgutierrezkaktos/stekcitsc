@@ -10,9 +10,10 @@
     <div id="app">
 
         <div class="login-box">
-        <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
-        </div><!-- /.login-logo -->
+            <div class="login-logo">
+                <center><img src="/img/logo_saopse.png" alt=""></center>
+                <a href="{{ url('/home') }}"><p>Gestión de Tickets</p></a>
+            </div>
 
         @if (session('status'))
             <div class="alert alert-success">
@@ -32,7 +33,7 @@
         @endif
 
         <div class="login-box-body">
-            <p class="login-box-msg">Reset Password</p>
+            <p class="login-box-msg">Recuperar Contraseña</p>
             <form action="{{ url('/password/email') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group has-feedback">
@@ -44,15 +45,14 @@
                     <div class="col-xs-2">
                     </div><!-- /.col -->
                     <div class="col-xs-8">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.sendpassword') }}</button>
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Recuperar vía eMail</button>
                     </div><!-- /.col -->
                     <div class="col-xs-2">
                     </div><!-- /.col -->
                 </div>
             </form>
 
-            <a href="{{ url('/login') }}">Log in</a><br>
-            <a href="{{ url('/register') }}" class="text-center">{{ trans('adminlte_lang::message.registermember') }}</a>
+            <a href="{{ url('/login') }}">Iniciar Sesión</a><br>
 
         </div><!-- /.login-box-body -->
 
