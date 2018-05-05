@@ -20,7 +20,7 @@
             <div class="col-xs-12">
                 <h2 class="page-header">
                     <i class="fa fa-road"></i> RUTA: {{  $fc -> name }}
-                    <small class="pull-right">Fecha: {{  $fc -> created_at }}</small>
+                    <small class="pull-right">Fecha / Hora Ingreso: {{  date("d/M/Y - H:i:s", strtotime($fc -> created_at)) }}</small>
                 </h2>
             </div>
             <!-- /.col -->

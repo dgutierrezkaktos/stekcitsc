@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -181,6 +181,7 @@ return [
          * Application Template Providers...
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        Laraveles\Spanish\SpanishServiceProvider::class,
 
 
     ],
