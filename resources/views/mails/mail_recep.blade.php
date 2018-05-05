@@ -37,7 +37,7 @@
     @elseif($det_ticket->concession_idconcession == 5)
         <a href="http://www.rutadelalgarrobo.cl"></a><b>Concesionaria Ruta del Algarrobo</b></a><br/>
     @endif
-    <strong>&copy; 2017 Todos los Derechos Reservados.
+    <strong>&copy; 2018 Todos los Derechos Reservados.
 </p>
 </body>
 </html>

@@ -56,7 +56,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"><img
-                        src="http://rdeldesierto.cl/wp-content/uploads/2016/04/rutas_desierto-baja-132x70.png"></a>
+                        src="http://rdeldesierto.cl/wp-content/uploads/2018/04/cropped-logo_desierto-374x140.png" width="200"></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -226,7 +226,6 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     </p>
 </div>
 </div>
-<br>
 <hr>
 </div> <!--/ .container -->
 </div><!--/ #introwrap -->
@@ -236,8 +235,9 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <p>
             <a href="http://www.rdeldesierto.cl"></a><b>Concesionaria Rutas del Desierto</b></a><br/>
-            <strong>&copy; 2017<a href="http://www.rdeldesierto.cl"> Todos los Derechos Reservados</a>.</strong>
-            Desarrollado por <a href="http://www.consultorait.cl">Consultora IT</a>.
+            <strong>&copy; 2018<a href="http://www.rdeldesierto.cl"> Todos los Derechos Reservados</a>.</strong>
+            <br>
+            <small>Desarrollado por <a href="http://www.danielgutierrez.cl">Daniel Gutiérrez F.</a>.</small>
         </p>
 
     </div>

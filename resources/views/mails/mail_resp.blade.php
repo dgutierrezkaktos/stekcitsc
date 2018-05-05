@@ -35,7 +35,7 @@
     @elseif($det_tic->concession_idconcession == 5)
         <a href="http://www.rutadelalgarrobo.cl"></a><b>Concesionaria Ruta del Algarrobo</b></a><br/>
     @endif
-    <strong>&copy; 2017<a href="http://www.rdeldesierto.cl"> Todos los Derechos Reservados</a>.
+    <strong>&copy; 2018<a href="http://www.rdeldesierto.cl"> Todos los Derechos Reservados</a>.
 </p>
 </body>
 </html>

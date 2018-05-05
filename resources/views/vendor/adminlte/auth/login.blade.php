@@ -50,7 +50,7 @@
     </div><!-- /.login-box -->
 
 
-    <center><strong>&copy; 2017 <a href="http://www.consultorait.cl">Consultora Informática Gutiérrez & Gutiérrez Ltda</a>.</strong></center>
+    <center><strong>&copy; 2018 <small>Desarrollado por <a href="http://www.danielgutierrez.cl">Daniel Gutiérrez F.</a>.</small></strong></center>
 
     @include('adminlte::layouts.partials.scripts_auth')
 

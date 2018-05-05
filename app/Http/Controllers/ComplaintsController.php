@@ -533,8 +533,8 @@ class ComplaintsController extends Controller
         if ($accion == 1) {
             if ($conce == 5) {
                 return $this->J5apvq8zq();
-            } else {
-
+            } elseif ($conce == 2) {
+                return $this->VVvarLnNDb();
             }
         } elseif ($accion == 2) {
 
