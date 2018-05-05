@@ -181,7 +181,6 @@ return [
          * Application Template Providers...
          */
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
-        Laraveles\Spanish\SpanishServiceProvider::class,
 
 
     ],
