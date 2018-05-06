@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('vendor.adminlte.auth.login');
 });
 
-Route::domain('tickets.rdeldesierto.cl')->group(function () {
+Route::group(array('domain' => 'tickets.rdeldesierto.cl'), function(){
     Route::get('/Tickets/VdelDesierto', 'ComplaintsController@VdelDesierto');
 });
 
