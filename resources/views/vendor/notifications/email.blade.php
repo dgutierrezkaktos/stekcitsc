@@ -4,15 +4,15 @@
 # {{ $greeting }}
 @else
 @if ($level == 'error')
-# @lang('Whoops!')
+# @lang('Error!')
 @else
-# @lang('Hello!')
+# @lang('Hola!')
 @endif
 @endif
 
 {{-- Intro Lines --}}
 @foreach ($introLines as $line)
-{{ $line }}
+{{ 'Link de Recuperación de Contraseñas de Usuario.' }}
 
 @endforeach
 
@@ -37,7 +37,7 @@
 
 {{-- Outro Lines --}}
 @foreach ($outroLines as $line)
-{{ $line }}
+{{ 'Si usted no solicito este correo, favor haga caso omiso de esto.' }}
 
 @endforeach
 
@@ -52,8 +52,8 @@
 @isset($actionText)
 @component('mail::subcopy')
 @lang(
-    "If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below\n".
-    'into your web browser: [:actionURL](:actionURL)',
+    "Si usted hace clic en \":actionText\" y el navegador no abre el link\n".
+    'tambien puede ingresar desde el siguiente Link: [:actionURL](:actionURL)',
     [
         'actionText' => $actionText,
         'actionURL' => $actionUrl
