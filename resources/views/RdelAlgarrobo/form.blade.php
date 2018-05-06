@@ -56,7 +56,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"><img
-                        src="http://rutadelalgarrobo.cl/wp-content/uploads/2016/04/ruta_algarrobo-baja-132x70.png"></a>
+                        src="http://rutadelalgarrobo.cl/wp-content/uploads/2016/04/logo_algarrobo-374x140.png" width="200"></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -240,8 +240,9 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <p>
             <a href="http://www.rutadelalgarrobo.cl"></a><b>Concesionaria Ruta del Algarrobo</b></a><br/>
-            <strong>&copy; 2017<a href="http://www.rutadelalgarrobo.cl"> Todos los Derechos Reservados</a>.</strong>
-            Desarrollado por <a href="http://www.consultorait.cl">Consultora IT</a>.
+            <strong>&copy; 2018<a href="http://www.rutadelalgarrobo.cl"> Todos los Derechos Reservados</a>.</strong>
+            <br>
+            <small>Desarrollado por <a href="http://www.danielgutierrez.cl">Daniel Gutiérrez F.</a>.</small>
         </p>
 
     </div>

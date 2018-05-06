@@ -30,8 +30,8 @@
             <div class="col-sm-2 invoice-col">
                 <?php
                 if($fc->concession_idconcession == '5'){
-                ?><img src="http://rutadelalgarrobo.cl/wp-content/uploads/2016/04/ruta_algarrobo-baja-132x70.png"
-                       alt=""><?php
+                ?><img src="http://rutadelalgarrobo.cl/wp-content/uploads/2016/04/logo_algarrobo-374x140.png"
+                       alt="" height="69"><?php
                 }elseif($fc->concession_idconcession == '2'){
                 ?><img src="http://rdeldesierto.cl/wp-content/uploads/2018/04/cropped-logo_desierto-374x140.png"
                        alt="" height="69"><?php

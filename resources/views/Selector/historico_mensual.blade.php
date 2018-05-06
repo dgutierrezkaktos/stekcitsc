@@ -8,8 +8,8 @@
     <div>
         <?php
         if($complaints[0]->concession_idconcession == '5'){
-        ?><img src="http://rutadelalgarrobo.cl/wp-content/uploads/2016/04/ruta_algarrobo-baja-132x70.png"
-               alt="">
+        ?><img src="http://rutadelalgarrobo.cl/wp-content/uploads/2016/04/logo_algarrobo-374x140.png"
+               alt="" width="200">
         <?php
         }
         ?>
