@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('vendor.adminlte.auth.login');
 });
 
+Route::domain('tickets.rdeldesierto.cl')->group(function () {
+    Route::get('/Tickets/VdelDesierto', 'ComplaintsController@VdelDesierto');
+});
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/Tickets/rHggzTfqae', 'ComplaintsController@rHggzTfqae');
@@ -47,8 +51,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/Configuracion', 'ComplaintsController@configuracion');
     Route::post('/Configuraciones', 'ComplaintsController@configuraciones');
-    Route::post('/ActualizaCorreo','ComplaintsController@actualizacorreo');
-    Route::post('/CambioClave','ComplaintsController@cambioclave');
+    Route::post('/ActualizaCorreo', 'ComplaintsController@actualizacorreo');
+    Route::post('/CambioClave', 'ComplaintsController@cambioclave');
 
 });
 
