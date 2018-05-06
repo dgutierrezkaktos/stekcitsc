@@ -10,9 +10,10 @@
 
     <div id="app">
         <div class="login-box">
-        <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
-        </div><!-- /.login-logo -->
+            <div class="login-logo">
+                <center><img src="/img/logo_saopse.png" alt=""></center>
+                <a href="{{ url('/home') }}"><p>Gestión de Tickets</p></a>
+            </div>
 
         @if (session('status'))
             <div class="alert alert-success">
@@ -37,7 +38,7 @@
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="token" value="{{ $token }}">
                 <div class="form-group has-feedback">
-                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}"/>
+                    <input type="email" class="form-control" placeholder="Correo" name="email" value="{{ old('email') }}"/>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
 
@@ -47,7 +48,7 @@
                 </div>
 
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="Password" name="password_confirmation"/>
+                    <input type="password" class="form-control" placeholder="Re-Ingresar Password" name="password_confirmation"/>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
 
@@ -62,9 +63,7 @@
                 </div>
             </form>
 
-            <a href="{{ url('/login') }}">Log in</a><br>
-            <a href="{{ url('/register') }}" class="text-center">{{ trans('adminlte_lang::message.membreship') }}</a>
-
+            <a href="{{ url('/login') }}">Volver</a><br>
         </div><!-- /.login-box-body -->
 
     </div><!-- /.login-box -->
