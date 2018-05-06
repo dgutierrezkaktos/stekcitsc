@@ -19,6 +19,14 @@ Route::group(array('domain' => 'tickets.rdeldesierto.cl'), function(){
     Route::get('/Tickets/VdelDesierto', 'ComplaintsController@VdelDesierto');
 });
 
+Route::group(array('domain' => 'http://tickets.rdeldesierto.cl'), function(){
+    Route::get('/Tickets/VdelDesierto', 'ComplaintsController@VdelDesierto');
+});
+
+Route::group(array('domain' => 'http://tickets.rdeldesierto.cl/'), function(){
+    Route::get('/Tickets/VdelDesierto', 'ComplaintsController@VdelDesierto');
+});
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/Tickets/rHggzTfqae', 'ComplaintsController@rHggzTfqae');
