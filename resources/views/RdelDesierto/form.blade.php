@@ -99,16 +99,15 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                                 <div class="form-group">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="Reclamo"
-                                                   checked>
-                                            Reclamo
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2"
+                                                   value="Solicitud Información" checked>
+                                            Solicitud de Información
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2"
-                                                   value="Solicitud Información">
-                                            Solicitud de Información
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="Reclamo">
+                                            Reclamo
                                         </label>
                                     </div>
                                     <div class="radio">
