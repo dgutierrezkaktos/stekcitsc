@@ -117,6 +117,12 @@ class ComplaintsController extends Controller
                 Mail::to($var6)
                     ->send(new ReciboTicket($IDTicket));
 
+            } elseif ($var13 == '3') { // OK
+                Mail::to($var6)
+                    ->cc($correos[0]->correo)
+                    ->bcc($correos[0]->correo2)
+                    ->send(new ReciboTicket($IDTicket));
+
             } elseif ($var13 == '5') {
                 Mail::to($var6)
                     ->cc($correos[0]->correo)
@@ -124,7 +130,7 @@ class ComplaintsController extends Controller
                     ->send(new ReciboTicket($IDTicket));
             }
 
-            return back()->with('status', 'Su requerimiento ha sido enviado a la Plataforma de Tickets!');
+            return back()->with('status', 'Su requerimiento ha sido enviado a la Plataforma de Tickets!, Revise continuamente su casilla SPAM');
         } catch (\Illuminate\Database\QueryException $ex) {
             return back()->with('error', 'Ha habido un error en el envio, favor intente mas tarde!');
         }
@@ -237,13 +243,42 @@ class ComplaintsController extends Controller
 
     public function ajPqZqzAYd()
     {
+
         $ac = Access::getAccesos();
-        $complaints = Complaint::where('concession_idconcession', '3')->get();
+
+        $complaints = Complaint::where('concession_idconcession', '3')
+            ->where('state', '=', '1')
+            ->get();
+
+        $reclamos = Complaint::where('type_contact', 'Reclamo')
+            ->where('concession_idconcession', '2')
+            ->where('state', '=', '1')
+            ->count();
+
+        $info = Complaint::where('type_contact', 'Solicitud Información')
+            ->where('concession_idconcession', '2')
+            ->where('state', '=', '1')
+            ->count();
+
+        $sugerencia = Complaint::where('type_contact', 'Sugerencia')
+            ->where('concession_idconcession', '2')
+            ->where('state', '=', '1')
+            ->count();
+
+        $felicitaciones = Complaint::where('type_contact', 'Felicitaciones')
+            ->where('concession_idconcession', '2')
+            ->where('state', '=', '1')
+            ->count();
 
         return view('RdelLimari.index', [
             'complaints' => $complaints,
-            'access' => $ac
+            'access' => $ac,
+            'reclamos' => $reclamos,
+            'info' => $info,
+            'sugerencia' => $sugerencia,
+            'felicitaciones' => $felicitaciones
         ]);
+
     }
 
     public function qPRxTCuQpe()
@@ -285,6 +320,75 @@ class ComplaintsController extends Controller
             ->count();
 
         return view('RdelAlgarrobo.index', [
+            'complaints' => $complaints,
+            'access' => $ac,
+            'reclamos' => $reclamos,
+            'info' => $info,
+            'sugerencia' => $sugerencia,
+            'felicitaciones' => $felicitaciones
+        ]);
+    }
+
+    public function historico_ajPqZqzAYd(){
+
+        $ac = Access::getAccesos();
+        $complaints = Complaint::where('concession_idconcession', '3')
+            ->where('state', '=', '2')
+            ->get();
+
+        $reclamos = Complaint::where('type_contact', 'Reclamo')
+            ->where('concession_idconcession', '3')
+            ->where('state', '=', '2')
+            ->count();
+
+        $info = Complaint::where('type_contact', 'Solicitud Información')
+            ->where('concession_idconcession', '3')
+            ->where('state', '=', '2')
+            ->count();
+
+        $sugerencia = Complaint::where('type_contact', 'Sugerencia')
+            ->where('concession_idconcession', '3')
+            ->where('state', '=', '2')
+            ->count();
+
+        $felicitaciones = Complaint::where('type_contact', 'Felicitaciones')
+            ->where('concession_idconcession', '3')
+            ->where('state', '=', '2')
+            ->count();
+
+        return view('RdelLimari.historico', [
+            'complaints' => $complaints,
+            'access' => $ac,
+            'reclamos' => $reclamos,
+            'info' => $info,
+            'sugerencia' => $sugerencia,
+            'felicitaciones' => $felicitaciones
+        ]);
+
+    }
+
+    public function full_ajPqZqzAYd(){
+        $ac = Access::getAccesos();
+        $complaints = Complaint::where('concession_idconcession', '3')
+            ->get();
+
+        $reclamos = Complaint::where('type_contact', 'Reclamo')
+            ->where('concession_idconcession', '3')
+            ->count();
+
+        $info = Complaint::where('type_contact', 'Solicitud Información')
+            ->where('concession_idconcession', '3')
+            ->count();
+
+        $sugerencia = Complaint::where('type_contact', 'Sugerencia')
+            ->where('concession_idconcession', '3')
+            ->count();
+
+        $felicitaciones = Complaint::where('type_contact', 'Felicitaciones')
+            ->where('concession_idconcession', '3')
+            ->count();
+
+        return view('RdelLimari.full', [
             'complaints' => $complaints,
             'access' => $ac,
             'reclamos' => $reclamos,

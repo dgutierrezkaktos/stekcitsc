@@ -4,15 +4,6 @@
 
 
 @section('main-content')
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @elseif(session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
 
     <div class="row">
         <div class="col-lg-3 col-xs-6">
@@ -81,9 +72,9 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Grilla de Tickets SIN RESOLVER - Ruta del Limarí -</h3>
-            <a class="btn btn-app btn" href="/Tickets/Historico/ajPqZqzAYd">
-                <i class="fa fa-eye"></i> Histórico
+            <h3 class="box-title">Grilla de Tickets RESUELTOS - Rutas del Limarí -</h3>
+            <a class="btn btn-app btn" href="/Tickets/ajPqZqzAYd">
+                <i class="fa fa-eye"></i> Actual
             </a>
             <a class="btn btn-app btn" href="/Tickets/Full/ajPqZqzAYd">
                 <i class="fa fa-list-alt"></i> Full Grilla
@@ -91,12 +82,14 @@
             <a class="btn btn-app btn" id="btnExport" href="#">
                 <i class="fa fa-file-excel-o"></i> Exportar
             </a>
+
         </div>
         <!-- /.box-header -->
         <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Folio</th>
                     <th>Acciones</th>
                     <th>Fecha Ingreso</th>
@@ -109,6 +102,7 @@
                 <?php
                 foreach ($complaints as $c){ ?>
                 <tr>
+                    <td>{{ $c->id_complaints }}</td>
                     <td>{{ $c->folio }}</td>
                     <td>
                         <div class="btn-group">
@@ -130,6 +124,7 @@
                 </tbody>
                 <tfoot>
                 <tr>
+                    <th>ID</th>
                     <th>Folio</th>
                     <th>Acciones</th>
                     <th>Fecha Apertura</th>

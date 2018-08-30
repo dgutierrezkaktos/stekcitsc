@@ -56,7 +56,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"><img
-                        src="http://www.rutadellimari.cl/wp-content/uploads/2016/04/ruta_limari-189x100.png"></a>
+                        src="http://www.rutadellimari.cl/wp-content/uploads/2016/04/logo_limari.png" width="200"></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -78,6 +78,15 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="row">
             <h1>Sistema de Reclamos Sugerencias y Consultas</h1>
             <h3>Concesión Ruta del Limarí</h3>
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @elseif(session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
             <br>
             <div class="col-lg-8">
                 <form class="form-horizontal" name="form" action="{{ url('/Enviar') }}" role="form" method="POST">
@@ -227,9 +236,10 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <a href="http://www.rutadellimari.cl/"></a><b>Concesionaria Ruta del Limarí</b></a><br/>
-            <strong>&copy; 2017<a href="http://www.rutadellimari.cl"> Todos los Derechos Reservados</a>.</strong>
-            Desarrollado por <a href="http://www.consultorait.cl">Consultora IT</a>.
+            <a href="http://www.rdeldesierto.cl"></a><b>Concesionaria Rutas del Desierto</b></a><br/>
+            <strong>&copy; 2018<a href="http://www.rdeldesierto.cl"> Todos los Derechos Reservados</a>.</strong>
+            <br>
+            <small>Desarrollado por <a href="http://www.danielgutierrez.cl">Daniel Gutiérrez F.</a>.</small>
         </p>
 
     </div>

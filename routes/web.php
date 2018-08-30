@@ -35,6 +35,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Tickets/qPRxTCuQpe', 'ComplaintsController@qPRxTCuQpe');
     Route::get('/Tickets/J5apvq8zq', 'ComplaintsController@J5apvq8zq');
 
+    // Ruta del Limari
+    Route::get('/Tickets/Historico/ajPqZqzAYd', 'ComplaintsController@historico_ajPqZqzAYd');
+    Route::get('/Tickets/Full/ajPqZqzAYd', 'ComplaintsController@full_ajPqZqzAYd');
+
     // Ruta del Desierto
     Route::get('/Tickets/Historico/VVvarLnNDb', 'ComplaintsController@historico_VVvarLnNDb');
     Route::get('/Tickets/Full/VVvarLnNDb', 'ComplaintsController@full_VVvarLnNDb');
@@ -46,6 +50,8 @@ Route::group(['middleware' => 'auth'], function () {
     // Valles del Biobio
     Route::get('/Tickets/Historico/rHggzTfqae', 'ComplaintsController@historico_rHggzTfqae');
     Route::get('/Tickets/Full/rHggzTfqae', 'ComplaintsController@full_rHggzTfqae');
+
+
 
     Route::post('/Fichas', 'ComplaintsController@fichas');
     Route::post('/Print', 'ComplaintsController@fic_print');

@@ -61,7 +61,7 @@ class AnswersController extends Controller
 
 
             $correos = DB::table('config')
-                ->where('concesionaria',$id_conce)
+                ->where('concesionaria', $id_conce)
                 ->get();
 
             if ($id_conce == '1') {
@@ -69,6 +69,12 @@ class AnswersController extends Controller
                     ->send(new EnviaRespuesta($id_ans, $id));
 
             } elseif ($id_conce == '2') {
+                Mail::to($mail_to->email)
+                    ->cc($correos[0]->correo)
+                    ->bcc($correos[0]->correo2)
+                    ->send(new EnviaRespuesta($id_ans, $id));
+
+            } elseif ($id_conce == '3') {
                 Mail::to($mail_to->email)
                     ->cc($correos[0]->correo)
                     ->bcc($correos[0]->correo2)

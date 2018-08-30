@@ -2,17 +2,7 @@
 @section('htmlheader_title')
 @endsection
 
-
 @section('main-content')
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @elseif(session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
 
     <div class="row">
         <div class="col-lg-3 col-xs-6">
@@ -81,16 +71,17 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Grilla de Tickets SIN RESOLVER - Ruta del Limarí -</h3>
-            <a class="btn btn-app btn" href="/Tickets/Historico/ajPqZqzAYd">
-                <i class="fa fa-eye"></i> Histórico
+            <h3 class="box-title">Grilla de TODOS los Tickets - Rutas del Limarí -</h3>
+            <a class="btn btn-app btn" href="/Tickets/ajPqZqzAYd">
+                <i class="fa fa-eye"></i> Actual
             </a>
-            <a class="btn btn-app btn" href="/Tickets/Full/ajPqZqzAYd">
-                <i class="fa fa-list-alt"></i> Full Grilla
+            <a class="btn btn-app btn" href="/Tickets/Historico/ajPqZqzAYd">
+                <i class="fa fa-list-alt"></i> Histórico Grilla
             </a>
             <a class="btn btn-app btn" id="btnExport" href="#">
                 <i class="fa fa-file-excel-o"></i> Exportar
             </a>
+
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -98,11 +89,13 @@
                 <thead>
                 <tr>
                     <th>Folio</th>
-                    <th>Acciones</th>
                     <th>Fecha Ingreso</th>
                     <th>Tipo Ticket</th>
                     <th>Nombre / Fono</th>
+                    <th>Correo</th>
                     <th>Asunto</th>
+                    <th>Mensaje</th>
+                    <th>Estado</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -110,33 +103,30 @@
                 foreach ($complaints as $c){ ?>
                 <tr>
                     <td>{{ $c->folio }}</td>
-                    <td>
-                        <div class="btn-group">
-                            <form action="{{ url('/Fichas') }}" role="form" method="POST">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <input type="hidden" name="id_comp" value="<?php echo $c->id_complaints?>">
-                                <button type="submit" class="btn-xs btn-success">
-                                    <i class="fa fa-file"></i> Ver Ficha
-                                </button>
-                            </form>
-                        </div>
+                    <td>{{ $c->created_at }}</td>
+                    <td>{{ $c->type_contact }}</td>
+                    <td>{{ $c->name_person}} - {{$c->phone }}</td>
+                    <td>{{ $c->email }}</td>
+                    <td>{{ $c->subject }}</td>
+                    <td>{{ $c->message }}</td>
+                    <td> @if($c->state==1)
+                            Abierto
+                        @else
+                            Cerrado
+                        @endif
                     </td>
-                    <td> {{ $c->created_at }}  </td>
-                    <td> {{ $c->type_contact }}  </td>
-                    <td> {{ $c->name_person }} - {{ $c->phone }}  </td>
-                    <td> {{ $c->subject }}</td>
                 </tr>
                 <?php } ?>
                 </tbody>
                 <tfoot>
-                <tr>
-                    <th>Folio</th>
-                    <th>Acciones</th>
-                    <th>Fecha Apertura</th>
-                    <th>Tipo Ticket</th>
-                    <th>Nombre / Fono</th>
-                    <th>Asunto</th>
-                </tr>
+                <th>Folio</th>
+                <th>Fecha Ingreso</th>
+                <th>Tipo Ticket</th>
+                <th>Nombre / Fono</th>
+                <th>Correo</th>
+                <th>Asunto</th>
+                <th>Mensaje</th>
+                <th>Estado</th>
                 </tfoot>
             </table>
         </div>
