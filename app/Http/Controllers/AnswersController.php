@@ -80,6 +80,10 @@ class AnswersController extends Controller
                     ->bcc($correos[0]->correo2)
                     ->send(new EnviaRespuesta($id_ans, $id));
 
+                Mail::to($mail_to->email)
+                    ->cc($correos[0]->correo3)
+                    ->send(new EnviaRespuesta($id_ans, $id));
+
             } elseif ($id_conce == '5') {
                 Mail::to($mail_to->email)
                     ->cc($correos[0]->correo)

@@ -123,6 +123,10 @@ class ComplaintsController extends Controller
                     ->bcc($correos[0]->correo2)
                     ->send(new ReciboTicket($IDTicket));
 
+                Mail::to($var6)
+                    ->cc($correos[0]->correo3)
+                    ->send(new ReciboTicket($IDTicket));
+
             } elseif ($var13 == '5') {
                 Mail::to($var6)
                     ->cc($correos[0]->correo)
