@@ -206,7 +206,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div class="col-lg-4">
     <p>
     <H5>Fono Emergencias: </H5>
-    <h3><label for="tel">51 267 4990</label></h3>
+    <h3><label for="tel">800 123 685</label></h3>
 
     <hr>
 
